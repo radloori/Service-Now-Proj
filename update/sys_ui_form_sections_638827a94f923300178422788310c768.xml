@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="638827a94f923300178422788310c768" sys_domain="global" table="x_375416_first_app_first_table" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-27 19:55:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6f8827a94f923300178422788310c769</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_375416_first_app_first_table" name="x_375416_first_app_first_table" sys_domain="global" view="a78827a94f923300178422788310c763">638827a94f923300178422788310c768</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_375416_first_app_first_table" sys_domain="global" view="a78827a94f923300178422788310c763">2b8827a94f923300178422788310c766</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-27 19:55:31</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_375416_first_app_first_table</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2019-06-27 19:55:31</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>638827a94f923300178422788310c768</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_375416_first_app_first_table</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="First App" source="x_375416_first_app">69079b214f923300178422788310c729</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="First App">69079b214f923300178422788310c729</sys_scope>
+            <sys_update_name>sys_ui_form_sections_638827a94f923300178422788310c768</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2019-06-27 19:55:31</sys_updated_on>
+            <sys_user/>
+            <view display_value="User" name="User">a78827a94f923300178422788310c763</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
