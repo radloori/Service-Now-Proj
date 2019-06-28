@@ -12,7 +12,7 @@
         <order/>
         <script><![CDATA[function onLoad() {
    //Type appropriate comment here, and begin script below
-	alert("on load script: alert when form loads");
+// 	alert("on load script: alert when form loads");
    
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -21,7 +21,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>66dc0ff14f123300178422788310c7db</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>On Load Example</sys_name>
         <sys_overrides/>
         <sys_package display_value="First App" source="x_375416_first_app">69079b214f923300178422788310c729</sys_package>
@@ -29,7 +29,7 @@
         <sys_scope display_value="First App">69079b214f923300178422788310c729</sys_scope>
         <sys_update_name>sys_script_client_66dc0ff14f123300178422788310c7db</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-06-28 12:50:12</sys_updated_on>
+        <sys_updated_on>2019-06-28 14:14:18</sys_updated_on>
         <table>x_375416_first_app_first_table</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

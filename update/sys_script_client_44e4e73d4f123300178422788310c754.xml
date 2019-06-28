@@ -4,40 +4,35 @@
         <active>true</active>
         <applies_extended>false</applies_extended>
         <condition/>
-        <description/>
-        <field>short_description</field>
+        <description>Set the default value for Requested for to currently logged in user</description>
+        <field>active</field>
         <global>true</global>
         <messages/>
-        <name>onChange Example</name>
+        <name>Set Requested for</name>
         <order/>
-        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-   if (isLoading || newValue === '') {
-      return;
+        <script><![CDATA[function onLoad() {
+   if(g_form.isNewRecord()) {
+	   g_form.setValue('u_requested_for', g_user.userID);
    }
-
-// 	alert("on change script: " + oldValue + " changed to: " + newValue);
-	
-// 	alert("glide form test: "+ g_form.getValue('short_description'));
-   //Type appropriate comment here, and begin script below
    
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2019-06-28 12:48:54</sys_created_on>
+        <sys_created_on>2019-06-28 14:20:39</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>6b305bf14f123300178422788310c720</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>onChange Example</sys_name>
+        <sys_id>44e4e73d4f123300178422788310c754</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Set Requested for</sys_name>
         <sys_overrides/>
         <sys_package display_value="First App" source="x_375416_first_app">69079b214f923300178422788310c729</sys_package>
         <sys_policy/>
         <sys_scope display_value="First App">69079b214f923300178422788310c729</sys_scope>
-        <sys_update_name>sys_script_client_6b305bf14f123300178422788310c720</sys_update_name>
+        <sys_update_name>sys_script_client_44e4e73d4f123300178422788310c754</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2019-06-28 14:28:41</sys_updated_on>
+        <sys_updated_on>2019-06-28 14:21:04</sys_updated_on>
         <table>x_375416_first_app_first_table</table>
-        <type>onChange</type>
+        <type>onLoad</type>
         <ui_type>10</ui_type>
         <view/>
     </sys_script_client>
