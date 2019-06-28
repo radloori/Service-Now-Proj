@@ -11,6 +11,7 @@
                 <element label="Your Department Choice" sequence="3" value="your_choice"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Request for email" mandatory="true" max_length="40" name="u_request_for_email" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="legal 1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
             <choice>
                 <element label="Human Resources 1" sequence="0" value="hr1"/>
