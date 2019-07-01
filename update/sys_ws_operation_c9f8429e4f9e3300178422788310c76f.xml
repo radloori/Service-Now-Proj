@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>fa_getinfo</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var requestUser = request.pathParams.user_name;
+	
+	var requestFAQuery = request.queryParams.fa_query;
+	
+	var requestUserName = new GlideRecord('sys_user');
+	
+	requestUserName.get('user_name', requestUser);
+	
+	
+	var userFACount = new GlideAggregate('x_375416_first_app_first_table');
+	
+	userFACount.addAggregate('COUNT');
+	userFACount.addQuery('u_requested_for', requestUserName.sys_id);
+	userFACount.addEncodedQuery(requestFAQuery);
+	userFACount.groupBy('u_requested_type');
+	userFACount.query();
+	
+	var faRecs = 0;
+	var faUserRecs = [];
+	var faRecsCount = 0;
+	
+	while(userFACount.next()) {
+		faRecs = userFACount.getAggregate('COUNT');
+		var reqType = userFACount.u_requested_type.getDisplayValue();
+		faUserRecs.push({"reuqestType": reqType, "count": faRecs});
+		faRecsCount = parseInt(faRecsCount)+ parseInt(faRecs);
+	}
+	
+	var body = {};
+	body.totalUserFARecs = faRecsCount;
+	body.catCounts = faUserRecs;
+	body.user = {"Username": requestUserName.user_name, "UserId": requestUserName.sys_id};
+	
+	response.setBody(body);
+	
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_375416_first_app/first_app_api/fagetinfo/{user_name}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/fagetinfo/{user_name}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <short_description>get info documentation </short_description>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-29 20:54:20</sys_created_on>
+        <sys_id>c9f8429e4f9e3300178422788310c76f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>fa_getinfo</sys_name>
+        <sys_package display_value="First App" source="x_375416_first_app">69079b214f923300178422788310c729</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="First App">69079b214f923300178422788310c729</sys_scope>
+        <sys_update_name>sys_ws_operation_c9f8429e4f9e3300178422788310c76f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-01 13:35:43</sys_updated_on>
+        <web_service_definition display_value="First App API">74f5861e4f9e3300178422788310c7c4</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

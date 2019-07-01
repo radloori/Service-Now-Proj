@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_auth_profile_basic">
+    <sys_auth_profile_basic action="INSERT_OR_UPDATE">
+        <name>web service user</name>
+        <password>yIrMoJbSLEg=</password>
+        <sys_class_name>sys_auth_profile_basic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-28 19:13:02</sys_created_on>
+        <sys_id>2f5828ca4fd23300178422788310c79a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>web service user</sys_name>
+        <sys_package display_value="First App" source="x_375416_first_app">69079b214f923300178422788310c729</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="First App">69079b214f923300178422788310c729</sys_scope>
+        <sys_update_name>sys_auth_profile_basic_2f5828ca4fd23300178422788310c79a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-06-28 19:13:02</sys_updated_on>
+        <username>test</username>
+    </sys_auth_profile_basic>
+</record_update>
